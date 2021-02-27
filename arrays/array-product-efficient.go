@@ -18,7 +18,7 @@ func main() {
 	maxIndex2 := -1
 	number := -1
 	number2 := -1
-
+        // find the index of the largest number in the array
 	for i := 0; i < len(array); i++ {
 		for j := i + 1; j < len(array); j++ {
 			if array[i] > array[j] && number < array[i] {
@@ -31,7 +31,7 @@ func main() {
 			}
 		}
 	}
-
+        //find the index of the second largest number in the array
 	for i := 0; i < len(array); i++ {
 		if i == maxIndex1 {
 			continue
@@ -56,6 +56,7 @@ func main() {
 	fmt.Println(maxIndex1)
 	fmt.Println(number2)
 	fmt.Println(maxIndex2)
+	// multiple the largest and the second largest number to get the product
 	product := number * number2
 	fmt.Println("the product of two largest numbers is:", product)
 }
