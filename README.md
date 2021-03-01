@@ -6,3 +6,4 @@ All examples are based on Golang.
 * https://www.calhoun.io/lets-learn-algorithms/
 * [Algos on GitHub](https://github.com/TheAlgorithms)
 * [Interview gym](https://github.com/partho-maple/coding-interview-gym)
+* [Binary numbers](https://www.mathsisfun.com/binary-number-system.html)
