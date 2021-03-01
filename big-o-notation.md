@@ -2,4 +2,4 @@
 
 * Contant time = o(1)
 * Linear time = o(n)
-* non-linear = o(n^2)
+* non-linear/n squared time = o(n^2)
