@@ -10,6 +10,6 @@ All examples are based on Golang.
 * [Complexity analysis graph](https://www.bigocheatsheet.com/)
 
 
-![Big O Chart](../images/bigo-chart.png)
+![Big O Chart](./images/bigo-chart.png)
 
-![Common Ops Chart](../images/common-ops-chart.png)
+![Common Ops Chart](./images/common-ops-chart.png)
