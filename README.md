@@ -8,3 +8,8 @@ All examples are based on Golang.
 * [Interview gym](https://github.com/partho-maple/coding-interview-gym)
 * [Binary numbers](https://www.mathsisfun.com/binary-number-system.html)
 * [Complexity analysis graph](https://www.bigocheatsheet.com/)
+
+
+![Big O Chart](../images/bigo-chart.png)
+
+![Common Ops Chart](../images/common-ops-chart.png)
