@@ -8,4 +8,5 @@ Space and time complexity table for various operations
 | :-:       | :-:        |
 | Accessing an element | O(1) |
 | Updatting an element | O(1) |
+| Initialize an array | O(n)|
 
