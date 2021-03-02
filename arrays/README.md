@@ -10,3 +10,5 @@ Space and time complexity table for various operations
 | Updatting an element | O(1) |
 | Initialize an array | O(n)|
 
+Worst case: O(n)
+Best case: O(1)
