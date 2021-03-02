@@ -10,7 +10,7 @@ Constant time operations for insert, delete and search.
 
 Uses hash function to transform key to an index.
 
-Key collisons can be an uses. Smart hashing functions minimize or eliminate collisons. 
+Key collisions can be an uses. Smart hashing functions minimize or eliminate collisions. 
 
 Resizing is also used to optimize hash tables.
 
