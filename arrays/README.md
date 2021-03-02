@@ -12,3 +12,5 @@ Space and time complexity table for various operations
 
 Worst case: O(n)
 Best case: O(1)
+
+Array insertions are generally bad.
