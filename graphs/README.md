@@ -10,3 +10,6 @@ A vertex is the circular node. An edge is the line that connects the vertices.
 Types of graphs:
 * Directed
 * Undirected
+* Cyclic
+* Acyclic
+* Connected
