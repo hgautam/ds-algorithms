@@ -7,3 +7,5 @@ Types of trees:
 * balanced binary tree
 * Reb black tree 
 * AVL tree 
+
+A tree has leaf nodes and branches.
