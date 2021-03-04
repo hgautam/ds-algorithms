@@ -1,6 +1,6 @@
 /*
 Find two numbers that match a target sum
-Sum cannot be arrived at by add two different integer twice
+Sum cannot be arrived at by add same integer twice
 You cant arrive at the solution by adding 5 to itself
 returnArray slice stores the number combination and
 can be returned to the caller of this func
