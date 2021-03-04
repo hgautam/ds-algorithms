@@ -25,6 +25,8 @@ func main() {
 		if _, ok := myMap[number]; ok {
 			//myMap[number] = number
 			arr = []int{a[i], number}
+			//to return the result back to the caller
+			//return []array{a[i], number}
 
 		} else {
 			fmt.Println("adding number", a[i])
@@ -34,4 +36,6 @@ func main() {
 
 	fmt.Println(arr)
 	fmt.Println(myMap)
+	//to return the empty aray
+	//return []int{}
 }
