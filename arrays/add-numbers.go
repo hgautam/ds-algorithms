@@ -20,17 +20,17 @@ func main() {
 
 	var returnArray []int
 
-out:
+	//out:
 	for i := 0; i < len(a); i++ {
-		for j := i; j < len(a); j++ {
-			// skip adding the integer to itself
-			if i == j {
-				continue
-			}
+		for j := i + 1; j < len(a); j++ {
 			if a[i]+a[j] == sum {
-				returnArray = append(returnArray, a[i])
-				returnArray = append(returnArray, a[j])
-				break out
+				returnArray = []int{a[i], a[j]}
+				// the following snippet creates a slice
+				// the slice should be used if you want to store all combinations that lead to the target
+				//returnArray = append(returnArray, a[i])
+				//returnArray = append(returnArray, a[j])
+				//use break when using slice if you want to find first combination that matches the target sum
+				//break out
 			}
 		}
 	}
