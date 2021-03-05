@@ -28,10 +28,9 @@ func main() {
 			//to return the result back to the caller
 			//return []array{a[i], number}
 
-		} else {
-			fmt.Println("adding number", a[i])
-			myMap[a[i]] = a[i]
-		}
+		} 
+		fmt.Println("adding number", a[i])
+		myMap[a[i]] = a[i]
 	}
 
 	fmt.Println(arr)
