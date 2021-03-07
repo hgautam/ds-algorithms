@@ -1,5 +1,7 @@
 /*
 Use of a while loop based solution to check if a given array is subsequence of a bigger array
+Time complexity is o(n)
+space complexity is constant o(1)
 */
 package main
 
