@@ -6,6 +6,7 @@ All examples are based on Golang.
 * https://www.calhoun.io/lets-learn-algorithms/
 * [Algos on GitHub](https://github.com/TheAlgorithms)
 * [Interview gym](https://github.com/partho-maple/coding-interview-gym)
+* [Codedecs-in Github exercises](https://github.com/codedecks-in/LeetCode-Solutions)
 * [Binary numbers](https://www.mathsisfun.com/binary-number-system.html)
 * [Complexity analysis graph](https://www.bigocheatsheet.com/)
 * [Data structures in Golang](https://github.com/procrypt/data-structures-golang)
