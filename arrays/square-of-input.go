@@ -1,6 +1,6 @@
 /*
 Takes a sorted array as input and returns a sorted array of square root of each integer in the array
-Time complexity of o(n)
+Time complexity of o(n log n)
 Space complexity of o(1)
 */
 package main
