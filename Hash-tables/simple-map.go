@@ -17,7 +17,7 @@ func main() {
 		fmt.Println(key, value)
 	}
 
-	//search for a key
+	//search for a key and update it
 	if val, ok := teams["GO"]; ok {
 		//do something here
 		fmt.Println("found", val)
