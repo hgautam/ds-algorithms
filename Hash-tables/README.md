@@ -1,5 +1,7 @@
 ### Hash tables
 
+We use Golang map type in our examples
+
 A key value store. Combination of arrays and linked lists.
 
 
