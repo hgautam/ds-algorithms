@@ -14,7 +14,8 @@ func main() {
 	var a = [3][2]string{{"HTML", "C#"}, {"C#", "PYTHON"}, {"PYTHON", "HTML"}}
 	var result = [3]int{0, 0, 1}
 
-	myMap := map[string]int{}
+	scores := map[string]int{}
+	var winner string
 
 	for i := 0; i < len(a); i++ {
 		var str []string
@@ -22,28 +23,28 @@ func main() {
 			//fmt.Println(a[i][j])
 			str = append(str, a[i][j])
 		}
-		//fmt.Println("home team: ", str[0])
-		//fmt.Println("away team: ", str[1])
 		if result[i] == 1 {
-			fmt.Println("winner is: ", str[0])
-			if val, ok := myMap[str[0]]; ok {
+			fmt.Println("winner is home team: ", str[0])
+			if val, ok := scores[str[0]]; ok {
 				//update the value
-				myMap[str[0]] = val + 3
-				fmt.Println("value is: ", val)
+				scores[str[0]] = val + 3
 			} else {
-				myMap[str[0]] = 3
+				scores[str[0]] = 3
+				winner = str[0]
 			}
 		} else {
-			fmt.Println("winner is: ", str[1])
-			if val, ok := myMap[str[1]]; ok {
+			fmt.Println("winner is away team: ", str[1])
+			if val, ok := scores[str[1]]; ok {
 				//update the value
-				myMap[str[0]] = val + 3
-				fmt.Println("value is: ", val)
+				scores[str[0]] = val + 3
+				//fmt.Println("value is: ", val)
 			} else {
-				myMap[str[1]] = 3
+				scores[str[1]] = 3
+				winner = str[1]
 			}
 		}
-		fmt.Println("Record set complete")
+		//fmt.Println("Record set complete")
 	}
-	fmt.Println("myMap has these entries: ", myMap)
+	fmt.Println("scores has these entries: ", scores)
+	fmt.Println("final winner is: ", winner)
 }
