@@ -2,6 +2,8 @@
 A multi-dimensional array represnts teams in a tournament
 second array denotes the result for the home team
 We determine the winner of the contest
+Time complexity: o(n^2) 
+space complexity:o(k). n is number of competitions, k is number of teams
 */
 package main
 
