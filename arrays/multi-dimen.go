@@ -14,8 +14,8 @@ func main() {
 	var a = [3][2]string{{"HTML", "C#"}, {"C#", "PYTHON"}, {"PYTHON", "HTML"}}
 	var result = [3]int{0, 0, 1}
 
-	scores := map[string]int{}
-	var winner string
+	bestTeam := " "
+	scores := map[string]int{bestTeam: 0}
 
 	for i := 0; i < len(a); i++ {
 		var str []string
@@ -23,28 +23,22 @@ func main() {
 			//fmt.Println(a[i][j])
 			str = append(str, a[i][j])
 		}
+		winningTeam := str[1]
 		if result[i] == 1 {
 			fmt.Println("winner is home team: ", str[0])
-			if val, ok := scores[str[0]]; ok {
-				//update the value
-				scores[str[0]] = val + 3
-			} else {
-				scores[str[0]] = 3
-				winner = str[0]
-			}
-		} else {
-			fmt.Println("winner is away team: ", str[1])
-			if val, ok := scores[str[1]]; ok {
-				//update the value
-				scores[str[0]] = val + 3
-				//fmt.Println("value is: ", val)
-			} else {
-				scores[str[1]] = 3
-				winner = str[1]
-			}
+			winningTeam = str[0]
+
 		}
-		//fmt.Println("Record set complete")
+		calScore(winningTeam, scores)
+		// set winning team as the best team
+		if scores[winningTeam] > scores[bestTeam] {
+			bestTeam = winningTeam
+		}
 	}
 	fmt.Println("scores has these entries: ", scores)
-	fmt.Println("final winner is: ", winner)
+	fmt.Println("final winner is: ", bestTeam)
+}
+
+func calScore(winner string, scores map[string]int) {
+	scores[winner] += 3
 }
