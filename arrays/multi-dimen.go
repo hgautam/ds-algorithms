@@ -11,20 +11,21 @@ import (
 
 func main() {
 	/* an 2 D array with 3 rows and 2 columns*/
-	var a = [3][2]string{{"HTML", "C#"}, {"C#", "PYTHON"}, {"PYTHON", "HTML"}}
-	var result = [3]int{0, 0, 1}
+	var competitions = [3][2]string{{"HTML", "C#"}, {"C#", "PYTHON"}, {"PYTHON", "HTML"}}
+	var results = [3]int{0, 0, 1}
 
+	const HOME_TEAM_WON = 1
 	bestTeam := " "
 	scores := map[string]int{bestTeam: 0}
 
-	for i := 0; i < len(a); i++ {
+	for i := 0; i < len(competitions); i++ {
 		var str []string
-		for j := 0; j < len(a[0]); j++ {
-			//fmt.Println(a[i][j])
-			str = append(str, a[i][j])
+		for j := 0; j < len(competitions[0]); j++ {
+			//fmt.Println(competitions[i][j])
+			str = append(str, competitions[i][j])
 		}
 		winningTeam := str[1]
-		if result[i] == 1 {
+		if results[i] == HOME_TEAM_WON {
 			fmt.Println("winner is home team: ", str[0])
 			winningTeam = str[0]
 
