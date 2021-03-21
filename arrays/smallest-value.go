@@ -14,6 +14,17 @@ import (
 func main() {
 
 	a := []int{5, 7, 1, 1, 2, 3, 22}
+	
+	// if emptry array is passed, return 1
+	if len(a) < 1 {
+		return 1
+	}
+	
+	if len(a) == 1 {
+		if a[0] > 1 {
+			return 1
+		}
+	}
 	sort.Ints(a)
 
 	smallestVal := a[0]
