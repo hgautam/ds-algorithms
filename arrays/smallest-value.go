@@ -19,13 +19,14 @@ func main() {
 	if len(a) < 1 {
 		return 1
 	}
-	
+	// if only one value passed in array, return 1 if the value is greater than 1
 	if len(a) == 1 {
 		if a[0] > 1 {
 			return 1
 		}
 	}
 	sort.Ints(a)
+	fmt.Println(a)
 
 	smallestVal := a[0]
 	nonReturnable := smallestVal + 1
@@ -43,10 +44,5 @@ func main() {
 		}
 
 	}
-
-	fmt.Println(a)
-	//fmt.Println(sum)
-	//fmt.Println("The smallest value that can be returned: ", smallestVal)
-	//fmt.Println("The largest value on the array: ", largestVal)
 	fmt.Println("The smallest that cant be returned: ", nonReturnable)
 }
