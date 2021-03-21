@@ -17,12 +17,14 @@ func main() {
 	
 	// if emptry array is passed, return 1
 	if len(a) < 1 {
-		return 1
+		//return 1
+		fmt.Println("nonReurntable val is: ", 1)
 	}
 	// if only one value passed in array, return 1 if the value is greater than 1
 	if len(a) == 1 {
 		if a[0] > 1 {
-			return 1
+			//return 1
+			fmt.Println("nonReurntable val is: ", 1)
 		}
 	}
 	sort.Ints(a)
