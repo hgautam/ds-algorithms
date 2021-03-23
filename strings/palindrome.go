@@ -18,7 +18,6 @@ func main() {
 	j := len(str) - 1
 	for i := 0; i < len(str); i++ {
 		if string(str[i]) != string(str[j]) {
-			fmt.Println("strig is not a palindrome")
 			isPalindrome = false
 			break
 		}
