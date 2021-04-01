@@ -15,11 +15,16 @@ import (
 
 func main() {
 	var list []string
-	str := "AAAAAAAAAAAAAAAAAAAABBCCDDDDDDDDDDDDDDDDDDDDD"
+	str := " "
 	length := 1
 
+	if len(str) == 1 {
+		fmt.Println(strconv.Itoa(length) + str)
+		return
+	}
+
 	for i := 1; i < len(str); i++ {
-		//fmt.Println(i)
+		fmt.Println(i)
 		if str[i] == str[i-1] {
 			length += 1
 		} else {
@@ -39,10 +44,10 @@ func main() {
 		//handle the last element of the input
 		if i == len(str)-1 {
 			if length > 9 {
-				list = processData(length, string(str[i-1]), list)
+				list = processData(length, string(str[i]), list)
 
 			} else {
-				list = append(list, strconv.Itoa(length), string(str[i-1]))
+				list = append(list, strconv.Itoa(length), string(str[i]))
 			}
 		}
 	}
