@@ -2,6 +2,8 @@
 Take a set of strings as input
 Print number and string
 Input string "AAABBCCDDDD" will result in output 3A,2B,2C,4D
+if the input has a string greater than 9 then it will be split 9 str and remainder str
+e.g. 10As will be return 9A1A
 */
 package main
 
@@ -13,7 +15,7 @@ import (
 
 func main() {
 	var list []string
-	str := "AAAAAAAAAAAABBCCDDDDDDDDDD"
+	str := "AAAAAAAAAAAAAAAAAAAABBCCDDDDDDDDDDDDDDDDDDDDD"
 	length := 1
 
 	for i := 1; i < len(str); i++ {
@@ -23,11 +25,11 @@ func main() {
 		} else {
 			//add the string to the list
 			if length > 9 {
-				list = append(list, strconv.Itoa(9), string(str[i-1]))
-				//mod of 9
-				modLen := length % 9
-				list = append(list, strconv.Itoa(modLen), string(str[i-1]))
+				//call the method
+				list = processData(length, string(str[i-1]), list)
+				fmt.Println("list is: ", list)
 				length = 1
+
 			} else {
 				list = append(list, strconv.Itoa(length), string(str[i-1]))
 				//reset the length back to 1 for the future run
@@ -37,10 +39,8 @@ func main() {
 		//handle the last element of the input
 		if i == len(str)-1 {
 			if length > 9 {
-				list = append(list, strconv.Itoa(9), string(str[i-1]))
-				//mod of 9
-				modLen := length % 9
-				list = append(list, strconv.Itoa(modLen), string(str[i-1]))
+				list = processData(length, string(str[i-1]), list)
+
 			} else {
 				list = append(list, strconv.Itoa(length), string(str[i-1]))
 			}
@@ -49,5 +49,20 @@ func main() {
 	//fmt.Println(list)
 	result := strings.Join(list, "")
 	fmt.Println(result)
+}
 
+func processData(length int, str string, list []string) []string {
+	newLength := length / 9
+	if newLength > 0 {
+		for j := 1; j < newLength+1; j++ {
+			list = append(list, strconv.Itoa(9), str)
+		}
+	}
+	//mod of 9
+	// to calculate remainder and add it to the list
+	modLen := length % 9
+	if modLen > 0 {
+		list = append(list, strconv.Itoa(modLen), str)
+	}
+	return list
 }
