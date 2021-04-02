@@ -17,11 +17,8 @@ func main() {
 	myMap2 := make(map[string]int)
 	createaMap(str, myMap1)
 	createaMap(outputStr, myMap2)
-	//fmt.Println(myMap1)
-	//fmt.Println(myMap2)
 
 	//itereate over output string and find if input string has those chars
-
 	for i := 0; i < len(outputStr); i++ {
 		key := string(outputStr[i])
 		//get the number of time key exists in the map
@@ -36,8 +33,6 @@ func main() {
 			fmt.Println("life sucks...")
 			flag = false
 		}
-		//fmt.Println("key is: ", key)
-		//fmt.Println("value is: ", val)
 	}
 	fmt.Println("flag is: ", flag)
 }
@@ -45,7 +40,6 @@ func main() {
 func createaMap(str string, myMap map[string]int) {
 	for i := 0; i < len(str); i++ {
 		key := string(str[i])
-		//fmt.Println(key)
 		if val, ok := myMap[key]; ok {
 			//increment the value
 			myMap[key] = val + 1
@@ -53,5 +47,4 @@ func createaMap(str string, myMap map[string]int) {
 			myMap[key] = 1
 		}
 	}
-
 }
