@@ -9,14 +9,23 @@ import (
 )
 
 func main() {
-	str := "aaabbbccc"
-	outputStr := "aabbcc"
+	str := "aheaolabbhb"
+	outputStr := "hello"
 	flag := false
+
+	// if output is zero length string then return true
+	if len(outputStr) < 1 {
+		//return true
+		flag = true
+		return
+	}
 
 	myMap1 := make(map[string]int)
 	myMap2 := make(map[string]int)
 	createaMap(str, myMap1)
 	createaMap(outputStr, myMap2)
+	fmt.Println(myMap1)
+	fmt.Println(myMap2)
 
 	//itereate over output string and find if input string has those chars
 	for i := 0; i < len(outputStr); i++ {
@@ -32,6 +41,7 @@ func main() {
 		} else {
 			fmt.Println("life sucks...")
 			flag = false
+			break
 		}
 	}
 	fmt.Println("flag is: ", flag)
@@ -40,6 +50,7 @@ func main() {
 func createaMap(str string, myMap map[string]int) {
 	for i := 0; i < len(str); i++ {
 		key := string(str[i])
+		//fmt.Println(key)
 		if val, ok := myMap[key]; ok {
 			//increment the value
 			myMap[key] = val + 1
