@@ -11,10 +11,10 @@ import (
 
 func main() {
 
-	str := "assscdddffffrg"
+	str := "abcdcaf"
 
 	myMap := make(map[string]int)
-	index := len(str) - 1
+	index := -1
 
 	//add chars in map
 
@@ -40,7 +40,7 @@ func main() {
 				index = 0
 				break
 			}
-			if index > idx {
+			if idx < index || index == -1 {
 				index = idx
 			}
 		}
