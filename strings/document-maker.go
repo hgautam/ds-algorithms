@@ -30,7 +30,7 @@ func main() {
 	//itereate over output string and find if input string has those chars
 	for i := 0; i < len(outputStr); i++ {
 		key := string(outputStr[i])
-		//get the number of time key exists in the map
+		//get the number of times a char exists in input and output strings
 		val := myMap2[key]
 		val1 := myMap1[key]
 
