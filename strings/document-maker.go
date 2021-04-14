@@ -22,6 +22,7 @@ func main() {
 
 	myMap1 := make(map[string]int)
 	myMap2 := make(map[string]int)
+	//create maps with number of times a char occurs
 	createaMap(str, myMap1)
 	createaMap(outputStr, myMap2)
 	fmt.Println(myMap1)
@@ -46,7 +47,7 @@ func main() {
 	}
 	fmt.Println("flag is: ", flag)
 }
-
+//find number of times a char occures in a string
 func createaMap(str string, myMap map[string]int) {
 	for i := 0; i < len(str); i++ {
 		key := string(str[i])
